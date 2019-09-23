@@ -1,0 +1,14 @@
+{
+    "name": "data-scraper",
+    "version": "0.0.1",
+    "homepage": "https://github.com/ada-popovic/coding-Y3S1A1",
+    "description": "coding scraping tool",
+    "author": "ada popovic",
+    "main": "app.js",
+    "dependencies": {
+        "nodemon": "latest",
+        "express": "latest",
+        "request": "latest",
+        "cheerio": "latest"
+    }
+}
