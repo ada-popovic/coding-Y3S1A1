@@ -68,3 +68,43 @@ app.get('/imdb', function(req, res) {
 app.listen(port);
 console.log('Magic happens on port ' + port);
 exports = module.exports = app;
+
+
+
+
+
+///////////////////////////////
+
+
+app.get('/guten', function(req, res) {
+
+  var url = 'https://www.gutenberg.org/browse/scores/top';
+
+  request(url, function(error, response, html) {
+    if (!error) {
+
+      var guten_data = []
+
+      var $ = cheerio.load(html);
+
+      $('.ol').filter(function() {
+        $(this).find('li').each(function(i, element) {
+
+          guten_data[i] = "'" + $(this).find('href').attr('src') + "'";
+
+      });
+      });
+
+      res.send(guten_data);
+      fs.writeFile('guten_output.js', "var guten_output = [" + guten_data + "]", function(error){
+        console.log("file is written successfully");
+      });
+
+    }
+  });
+
+});
+
+app.listen(port);
+console.log('Magic happens on port ' + port);
+exports = module.exports = app;
