@@ -31,10 +31,7 @@ app.get('/wikipedia', function(req, res) {
 
     }
   });
-
 });
-
-
 
 app.get('/imdb', function(req, res) {
 
@@ -59,18 +56,10 @@ app.get('/imdb', function(req, res) {
       fs.writeFile('imdb_output.js', "var imdb_output = [" + imdb_data + "]", function(error){
         console.log("file is written successfully");
       });
-
     }
   });
 
 });
-
-app.listen(port);
-console.log('Magic happens on port ' + port);
-exports = module.exports = app;
-
-
-
 
 
 ///////////////////////////////
@@ -87,12 +76,12 @@ app.get('/guten', function(req, res) {
 
       var $ = cheerio.load(html);
 
-      $('.ol').filter(function() {
-        $(this).find('li').each(function(i, element) {
+      $('h2#books-last1 + ol').filter(function() {
+        $(this).find('a').each(function(i, element) {
 
           guten_data[i] = "'" + $(this).find('href').attr('src') + "'";
 
-      });
+        });
       });
 
       res.send(guten_data);
