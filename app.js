@@ -78,9 +78,8 @@ app.get('/guten', function(req, res) {
 
       $('h2#books-last1 + ol').filter(function() {
         $(this).find('a').each(function(i, element) {
-
-          guten_data[i] = "'" + $(this).find('href').attr('src') + "'";
-
+          // guten_data[i] = $(this).text();
+          guten_data[i] = "'" + $(this).attr('href') + "'";
         });
       });
 
