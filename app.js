@@ -84,7 +84,7 @@ app.get('/guten', function(req, res) {
       });
 
 
-      var url2 = "http://www.gutenberg.org" + "'" + $(this).attr('href') + "'";
+      var url2 = "'" + $(this).attr('href') + "'";
 
       request(url2, function(error, response, html) {
         if (!error) {
