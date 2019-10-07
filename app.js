@@ -79,9 +79,26 @@ app.get('/guten', function(req, res) {
       $('h2#books-last1 + ol').filter(function() {
         $(this).find('a').each(function(i, element) {
           // guten_data[i] = $(this).text();
-          guten_data[i] = "'" + $(this).attr('href') + "'";
+          guten_data[i] = "http://www.gutenberg.org" + "'" + $(this).attr('href') + "'";
         });
       });
+
+
+      var url2 = "http://www.gutenberg.org" + "'" + $(this).attr('href') + "'";
+
+      request(url2, function(error, response, html) {
+        if (!error) {
+
+          var guten_data = []
+
+          var $ = cheerio.load(html);
+
+          $('#download + even').filter(function() {
+            $(this).find('about').each(function(i, element) {
+              // guten_data[i] = $(this).text();
+              guten_data[i] = "'" + $(this).attr('href') + "'";
+            });
+          });
 
       res.send(guten_data);
       fs.writeFile('guten_output.js', "var guten_output = [" + guten_data + "]", function(error){
