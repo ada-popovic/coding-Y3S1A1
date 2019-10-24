@@ -1,12 +1,14 @@
-var txtFile = new XMLHttpRequest();
-    var allText = 'guten_address.txt';
-    txtFile.onreadystatechange = function () {
-        if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
-            allText = txtFile.responseText;
-            allText = allText.split("\n").join("<br>");
+function load() {
+    var file = new XMLHttpRequest();
+    file.open("GET", "guten_address.txt", true);
+    file.onreadystatechange = function() {
+      if (file.readyState === 4) {  // Makes sure the document is ready to parse
+        if (file.status === 200) {  // Makes sure it's found the file
+          text = file.responseText;
+          document.getElementById("text").innerHTML = text;
         }
-
-        document.getElementById('text').innerHTML = allText;
+      }
     }
-    txtFile.open("GET", 'guten_address.txt', true);
-    txtFile.send(null);
+}
+
+window.onLoad = load();
