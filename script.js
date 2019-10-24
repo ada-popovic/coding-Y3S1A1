@@ -1,5 +1,5 @@
 var txtFile = new XMLHttpRequest();
-    var allText = "file not found";
+    var allText = 'guten_address.txt';
     txtFile.onreadystatechange = function () {
         if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
             allText = txtFile.responseText;
