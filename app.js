@@ -81,8 +81,8 @@ app.get('/guten', function(req, res) {
           // guten_data[i] = $(this).text();
           // guten_data[i] = "http://www.gutenberg.org/files/" + "'" + $(this).attr('href') + "'";
           var bookNumber = $(this).attr('href');
-          var bookNumber2 = str.substring(0);
-          guten_data_urls[i] = "http://www.gutenberg.org/files/" + bookNumber2 + "/" + bookNumber2 + "-h/" + bookNumber2 + "-h.htm";
+          // var bookNumber2 = str.substring(0);
+          guten_data_urls[i] = "http://www.gutenberg.org/files/" + bookNumber + "/" + bookNumber + "-h/" + bookNumber + "-h.htm";
         });
       });
 
