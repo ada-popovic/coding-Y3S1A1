@@ -13,3 +13,9 @@ body {
     display: inline-block;
     background-color: red;
 }
+
+.text {
+  width: 30%;
+  height: 100%;
+  margin-left: 10%;
+}
