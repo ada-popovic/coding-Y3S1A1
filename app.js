@@ -80,7 +80,7 @@ app.get('/guten', function(req, res) {
         $(this).find('a').each(function(i, element) {
           // guten_data[i] = $(this).text();
           // guten_data[i] = "http://www.gutenberg.org/files/" + "'" + $(this).attr('href') + "'";
-          var bookNumber = $(this).attr('href') - "http://www.gutenberg.org/ebooks/";
+          var bookNumber = $(this).attr('href') - "http://www.gutenberg.org/";
           guten_data_urls[i] = "http://www.gutenberg.org/files/" + bookNumber + "/" + bookNumber + "-h/" + bookNumber+ "-h.htm";
         });
       });
