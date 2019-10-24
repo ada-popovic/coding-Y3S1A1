@@ -1,0 +1,15 @@
+html,
+A {text-decoration: none;}
+body {
+    height: 400%;
+}
+
+* {
+    margin: 0;
+
+}
+
+body {
+    display: inline-block;
+    background-color: red;
+}

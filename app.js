@@ -91,7 +91,7 @@ app.get('/guten', function(req, res) {
           json: true
         }, function(err, res, body) {
           if(!error) {
-            fs.writeFile('./hello.txt', guten_data_urls, function(error){
+            fs.writeFile('./guten_address.txt', guten_data_urls, function(error){
               console.log("file is written successfully");
             });
           }
