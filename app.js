@@ -92,7 +92,7 @@ app.get('/guten', function(req, res) {
           json: true
         }, function(err, res, body) {
           if(!error) {
-            fs.writeFile('./guten_address.txt', guten_data_urls, function(error){
+            fs.writeFile('./guten_address.html', guten_data_urls, function(error){
               console.log("file is written successfully");
             });
           }
@@ -102,28 +102,28 @@ app.get('/guten', function(req, res) {
 
 
 
-      app.get('/guten2', function(req, res) {
-
-        var url2 = "http://www.gutenberg.org/files/" + bookNumber + "/" + bookNumber + "-h/" + bookNumber + "-h.htm";
-
-        request(url, function(error, response, html) {
-          if (!error) {
-
-            var guten_data_urls2 = []
-
-            var $2 = cheerio.load(html);
-
-            $('h3').filter(function() {
-              $(this).find('p').each(function(i, element) {
-                // guten_data[i] = $(this).text();
-                // guten_data[i] = "http://www.gutenberg.org/files/" + "'" + $(this).attr('href') + "'";
-                var bookNumber2 = $(this).attr('href')
-                  fs.writeFile('./guten_address2.txt', guten_data_urls2, function(error){
-                    console.log("file is written successfully");
-                  });
-                }
-              })
-            });
+      // app.get('/guten2', function(req, res) {
+      //
+      //   var url2 = "http://www.gutenberg.org/files/" + bookNumber + "/" + bookNumber + "-h/" + bookNumber + "-h.htm";
+      //
+      //   request(url, function(error, response, html) {
+      //     if (!error) {
+      //
+      //       var guten_data_urls2 = []
+      //
+      //       var $2 = cheerio.load(html);
+      //
+      //       $('h3').filter(function() {
+      //         $(this).find('p').each(function(i, element) {
+      //           // guten_data[i] = $(this).text();
+      //           // guten_data[i] = "http://www.gutenberg.org/files/" + "'" + $(this).attr('href') + "'";
+      //           var bookNumber2 = $(this).attr('href')
+      //             fs.writeFile('./guten_address2.txt', guten_data_urls2, function(error){
+      //               console.log("file is written successfully");
+      //             });
+      //           }
+      //         })
+      //       });
 
 
       // var url2 = "'" + $(this).attr('href') + "'";
