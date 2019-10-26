@@ -86,6 +86,18 @@ app.get('/guten', function(req, res) {
         });
       });
 
+
+      // $('h3').filter(function() {
+      //   $(this).find('p').each(function(i, element) {
+
+      //     var bookNumber = $(this).attr('href').substring(8);
+
+      //     guten_data_urls[i] = "http://www.gutenberg.org/files/" + bookNumber + "/" + bookNumber + "-h/" + bookNumber + "-h.htm";
+      //   });
+      // });
+
+
+
       guten_data_urls.forEach(function(url){
         request({
           url: url,
