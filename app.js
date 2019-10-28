@@ -88,13 +88,13 @@ app.get('/guten', function(req, res) {
 
 //IMPLEMENTING BOOK content
 
-      $('h3').filter(function() {
-        $(this).find('p').each(function(i, element) {
-
-          var bookText= $(this).attr('a').;
-
-        });
-      });
+      // $('h3').filter(function() {
+      //   $(this).find('p').each(function(i, element) {
+      //
+      //     var bookText= $(this).attr('a').;
+      //
+      //   });
+      // });
 
 
 
