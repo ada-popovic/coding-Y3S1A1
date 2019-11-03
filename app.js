@@ -144,7 +144,7 @@ app.get('/guten', function(req, res) {
   });
 });
 
-app.get('/getbookdata', function(req, res){
+app.get('/books', function(req, res){
   // var url = 'http://www.gutenberg.org/files/84/84-h/84-h.htm';
 
   // guten_data_urls.forEach(function(url){
@@ -185,7 +185,7 @@ app.get('/getbookdata', function(req, res){
 
         console.log(book_data);
 
-        fs.writeFile('./' + index + '-story.txt', book_data, function(error){
+        fs.writeFile('./' + index + '-story.html', book_data, function(error){
           console.log("file is written successfully");
         });
         index++;
