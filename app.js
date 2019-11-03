@@ -172,7 +172,7 @@ app.get('/books', function(req, res){
 
         var book_data = [];
         $('body').filter(function() {
-          $(this).find('*').each(function(i, elem){
+          $(this).find('p').each(function(i, elem){
             book_data[i] = $(this).text();
           });
 
