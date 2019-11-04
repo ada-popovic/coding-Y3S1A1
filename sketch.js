@@ -41,18 +41,16 @@
 //   noCanvas();
 // }
 
+// $(document).ready(function(){
+//
+//    $('#content').load("98-story.html");
+//
+// });
 
-
-
-
-
-$(document).ready(function(){
-
-   $('#content').load("98-story.html");
-
-});
-
-
+function myFunction() {
+  $('#content').load("98-story.html");
+  // code here CAN use carName
+}
 
 
 
