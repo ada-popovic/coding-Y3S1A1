@@ -41,15 +41,15 @@
 //   noCanvas();
 // }
 
-// $(document).ready(function(){
-//
-//    $('#content').load("98-story.html");
-//
-// });
+$(document).ready(function(){
 
-function myFunction() {
-  $('#content').load("98-story.html");
-}
+   $('#content').load("98-story.html");
+
+});
+
+// function myFunction() {
+//   $('#content').load("98-story.html");
+// }
 
 
 
