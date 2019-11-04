@@ -49,8 +49,8 @@
 
 function myFunction() {
   $('#content').load("98-story.html");
-  // code here CAN use carName
 }
+
 
 
 
