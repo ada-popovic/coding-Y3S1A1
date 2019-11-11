@@ -79,7 +79,7 @@ function preload() {
 function setup() {
   var allwords = txt.join("\n");
   var tokens = allwords.split(/\W+/);
-  // console.log(tokens);
+  console.log(tokens);
   for (var i = 0; i < tokens.length; i++) {
     var word = tokens[i].toLowerCase();
     if (!/\d+/.test(word)) {
