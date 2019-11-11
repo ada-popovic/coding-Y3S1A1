@@ -104,7 +104,7 @@ function preload() {
 
 function setup() {
   var allwords = txt.join('\n');
-  var tokens = allwords.split(/\W+);
+  var tokens = allwords.split(/\W+/);
   console.log(tokens);
 
   noCanvas();
