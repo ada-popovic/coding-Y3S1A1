@@ -55,7 +55,7 @@ var counts = {};
 var keys = [];
 
 function preload() {
-  txt = loadStrings("14-story.html");
+  txt = loadStrings("5-story.html");
 
 }
 
