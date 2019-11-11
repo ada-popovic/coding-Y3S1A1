@@ -103,11 +103,18 @@ function setup() {
 
   for (var i = 0; i < keys.length; i++) {
     var key = keys[i];
-    createDiv(key + " " + counts[key]);
+
+    if(counts[key] <= 100 && counts[key] >= 10) {
+
+      for(var jndex = 0; jndex < counts[key]; jndex++) {
+        // createDiv(key + " " + counts[key]);
+        createDiv(key).addClass('key');
+        // console.log(key);
+      }
+
+    }
 
   }
-
-
 
   noCanvas();
 }
