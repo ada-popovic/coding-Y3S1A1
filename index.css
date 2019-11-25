@@ -10,23 +10,86 @@ body {
 }
 
 body {
-    display: inline-block;
-    background-color: lightpink;
+    background-color: white;
 
 }
 
-.text {
-  width: 100%;
-  height: 100%;
-  margin-left: 20%;
-}
-
-.key {
-  width: 100%;
-  height: 100%;
-  margin-left: 5%;
-  font-size: 1em;
-  font-family: sans-serif;
-  color: blue;
+.adaski {
+  float: none;
   display: inline-block;
+  text-align: left;
+  /* width: 3%;
+  height: 100%; */
+  width: 30px;
+  height: 40px;
+  /* width: 2%;
+  height: 2%; */
+  margin-left: 4%;
+  font-size: 1em;
+  font-family: Bagnard;
+  color: green;
+  /* animation-name: colorchange;
+  animation-duration: 6s;
+  animation-iteration-count: infinite; */
+
+}
+
+/* play with margin, float, width in percent and px */
+
+
+
+@-webkit-keyframes colorchange {
+  0% {
+
+    color: pink;
+  }
+
+  10% {
+
+    color: #8e44ad;
+  }
+
+  20% {
+
+    color: #1abc9c;
+  }
+
+  30% {
+
+    color: #d35400;
+  }
+
+  40% {
+
+    color: blue;
+  }
+
+  50% {
+
+    color: #34495e;
+  }
+
+  60% {
+
+    color: blue;
+  }
+
+  70% {
+
+    color: #2980b9;
+  }
+  80% {
+
+    color: #f1c40f;
+  }
+
+  90% {
+
+    color: #2980b9;
+  }
+
+  100% {
+
+    color: pink;
+  }
 }

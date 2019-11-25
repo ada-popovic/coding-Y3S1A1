@@ -64,52 +64,277 @@
 
 
 
+///1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 
 
+// var txt;
+// var counts = {};
+// var keys = [];
+//
+// function preload() {
+//   txt = loadStrings("typeset.html");
+//
+// }
+//
+// function setup() {
+//   var allwords = txt.join("\n");
+//   var tokens = allwords.split(/\W+/);
+//   console.log(tokens);
+//   for (var i = 0; i < tokens.length; i++) {
+//     var word = tokens[i].toLowerCase();
+//     if (!/\d+/.test(word)) {
+//       //console.log(word);
+//       if (counts[word] === undefined) {
+//         counts[word] = 1;
+//         keys.push(word);
+//       } else {
+//         counts[word] = counts[word] + 1;
+//       }
+//     }
+//   }
+//
+//   keys.sort(compare);
+//
+//   function compare(a, b) {
+//     var countA = counts[a];
+//     var countB = counts[b];
+//     return countB - countA;
+//   }
+//
+//   for (var i = 0; i < keys.length; i++) {
+//     var key = keys[i];
+//
+//     if(counts[key] <= 300 && counts[key] >= 50) {
+//
+//       for(var jndex = 0; jndex < counts[key]; jndex++) {
+//         // createDiv(key + " " + counts[key]);
+//         createDiv(key).addClass('adaski');
+//         // console.log(key);
+//       }
+//
+//     }
+//
+//   }
+//
+//   noCanvas();
+// }
+//
 
-var txt;
+//////////22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+
+// var txt;
+// var counts = {};
+// var keys = [];
+//
+// function preload() {
+//   txt = loadStrings('aaa.html');
+//
+// }
+//
+// function setup() {
+//   var allwords = txt.join("\n");
+//   var tokens = allwords.split(/\W+/);
+//   for (var i = 0; i < tokens.length; i++) {
+//     var word = tokens[i].toLowerCase();
+//     if (!/\d+/.test(word)) {
+//       //console.log(word);
+//       if (counts[word] === undefined) {
+//         counts[word] = 1;
+//         keys.push(word);
+//       } else {
+//         counts[word] = counts[word] + 1;
+//       }
+//     }
+//   }
+//
+//   keys.sort(compare);
+//
+//   function compare(a, b) {
+//     var countA = counts[a];
+//     var countB = counts[b];
+//     return countB - countA;
+//   }
+//
+//   for (var i = 0; i < keys.length; i++) {
+//     var key = keys[i];
+//     createDiv(key + " " + counts[key]);
+//   }
+//
+//
+//
+//   noCanvas();
+// }
+
+
+//////333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+
+// var txt = [];
+// var counts = {};
+// var keys = [];
+// var allwords = [];
+//
+// var files = ['13-story.html','12-story.html','14-story.html','16-story.html','15-story.html'];
+//
+// function preload() {
+//   for (var i = 0; i < files.length; i++) {
+//     txt[i] = loadStrings(files[i]);
+//   }
+// }
+//
+// function setup() {
+//   for (var i = 0; i < txt.length; i++) {
+//     allwords[i] = txt[i].join("\n");
+//   }
+//
+//   var tokens = allwords[0].split(/\W+/);
+//   for (var i = 0; i < tokens.length; i++) {
+//     var word = tokens[i].toLowerCase();
+//     if (counts[word] === undefined) {
+//       counts[word] = {
+//         tf: 1,
+//         df: 1
+//       };
+//       keys.push(word);
+//     } else {
+//       counts[word].tf = counts[word].tf + 1;
+//     }
+//   }
+//
+//   var othercounts = [];
+//   for (var j = 1; j < allwords.length; j++) {
+//     var tempcounts = {};
+//     var tokens = allwords[j].split(/\W+/);
+//     for (var k = 0; k < tokens.length; k++) {
+//       var w = tokens[k].toLowerCase();
+//       if (tempcounts[w] === undefined) {
+//         tempcounts[w] = true;
+//       }
+//     }
+//     othercounts.push(tempcounts);
+//   }
+//
+//
+//
+//   for (var i = 0; i < keys.length; i++) {
+//     var word = keys[i];
+//     for (var j = 0; j < othercounts.length; j++) {
+//       var tempcounts = othercounts[j];
+//       if (tempcounts[word]) {
+//         counts[word].df++;
+//       }
+//     }
+//   }
+//
+//   for (var i = 0; i < keys.length; i++) {
+//     var word = keys[i];
+//     var wordobj = counts[word];
+//     wordobj.tfidf = wordobj.tf * log(files.length / wordobj.df);
+//   }
+//
+//
+//   keys.sort(compare);
+//
+//   function compare(a, b) {
+//     var countA = counts[a].tfidf;
+//     var countB = counts[b].tfidf;
+//     return countB - countA;
+//   }
+//
+//   for (var i = 0; i < keys.length; i++) {
+//     var key = keys[i];
+//     createDiv(key + " " + counts[key].tfidf);
+//   }
+//
+//   noCanvas();
+// }
+
+/////////44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+
+var txt = [];
 var counts = {};
 var keys = [];
+var allwords = [];
+
+var files = ['13-story.html','12-story.html','14-story.html','16-story.html','15-story.html'];
 
 function preload() {
-  txt = loadStrings("5-story.html");
-
+  for (var i = 0; i < files.length; i++) {
+    txt[i] = loadStrings(files[i]);
+  }
 }
 
 function setup() {
-  var allwords = txt.join("\n");
-  var tokens = allwords.split(/\W+/);
-  console.log(tokens);
+  for (var i = 0; i < txt.length; i++) {
+    allwords[i] = txt[i].join("\n");
+  }
+
+  var tokens = allwords[0].split(/\W+/);
   for (var i = 0; i < tokens.length; i++) {
     var word = tokens[i].toLowerCase();
-    if (!/\d+/.test(word)) {
-      //console.log(word);
-      if (counts[word] === undefined) {
-        counts[word] = 1;
-        keys.push(word);
-      } else {
-        counts[word] = counts[word] + 1;
+    if (counts[word] === undefined) {
+      counts[word] = {
+        tf: 1,
+        df: 1
+      };
+      keys.push(word);
+    } else {
+      counts[word].tf = counts[word].tf + 1;
+    }
+  }
+
+  var othercounts = [];
+  for (var j = 1; j < allwords.length; j++) {
+    var tempcounts = {};
+    var tokens = allwords[j].split(/\W+/);
+    for (var k = 0; k < tokens.length; k++) {
+      var w = tokens[k].toLowerCase();
+      if (tempcounts[w] === undefined) {
+        tempcounts[w] = true;
+      }
+    }
+    othercounts.push(tempcounts);
+  }
+
+
+
+  for (var i = 0; i < keys.length; i++) {
+    var word = keys[i];
+    for (var j = 0; j < othercounts.length; j++) {
+      var tempcounts = othercounts[j];
+      if (tempcounts[word]) {
+        counts[word].df++;
       }
     }
   }
 
+  for (var i = 0; i < keys.length; i++) {
+    var word = keys[i];
+    var wordobj = counts[word];
+    wordobj.tfidf = wordobj.tf * log(files.length / wordobj.df);
+  }
+
+
   keys.sort(compare);
 
   function compare(a, b) {
-    var countA = counts[a];
-    var countB = counts[b];
+    var countA = counts[a].tfidf;
+    var countB = counts[b].tfidf;
     return countB - countA;
   }
+
 
   for (var i = 0; i < keys.length; i++) {
     var key = keys[i];
 
-    if(counts[key] <= 100 && counts[key] >= 10) {
+    // console.log(key);
 
-      for(var jndex = 0; jndex < counts[key]; jndex++) {
+  // console.log(counts[key].tfidf);
+
+    if(counts[key].tfidf >= 20) {
+
+      for(var jndex = 0; jndex < counts[key].tfidf; jndex++) {
         // createDiv(key + " " + counts[key]);
-        createDiv(key).addClass('key');
-        // console.log(key);
+        createDiv(key).addClass('adaski');
       }
 
     }
@@ -118,7 +343,9 @@ function setup() {
 
   noCanvas();
 }
-//////////
+
+
+
 
 
 // var txt;
