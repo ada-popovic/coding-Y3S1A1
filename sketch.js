@@ -249,13 +249,13 @@
 // }
 
 /////////44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
-
+var randomNumber = Math.floor(Math.random() * 100) + 1;
 var txt = [];
 var counts = {};
 var keys = [];
 var allwords = [];
 
-var files = ['3-story.html','14-story.html','17-story.html','18-story.html'];
+var files = ['./'+ randomNumber + '-story.html','14-story.html','17-story.html','18-story.html'];
 
 function preload() {
   for (var i = 0; i < files.length; i++) {
@@ -350,7 +350,11 @@ function setup() {
 for (var i = 0; i < keys.length; i++) {
   var key = keys[i];
 
-  if(counts[key].tfidf >= 20){
+  // if(counts[key].tfidf >= 20){
+  //   createDiv(key).addClass('adaski');
+  // }
+
+  if(keys.length= 5){
     createDiv(key).addClass('adaski');
   }
 
@@ -360,7 +364,7 @@ noCanvas();
 }
 
 $(document).ready(function(){
-  $('#container').load('3.html');
+  $('#container').load('./'+ randomNumber + '.html');
 
 });
 
