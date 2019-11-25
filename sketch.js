@@ -249,7 +249,7 @@
 // }
 
 /////////44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
-var randomNumber = Math.floor(Math.random() * 100) + 1;
+var randomNumber = Math.floor(Math.random() * 99) + 2;
 var txt = [];
 var counts = {};
 var keys = [];
