@@ -255,7 +255,7 @@ var counts = {};
 var keys = [];
 var allwords = [];
 
-var files = ['./'+ randomNumber + '-story.html','14-story.html','17-story.html','18-story.html'];
+var files = ['./'+ randomNumber + '-story.html','7-story.html','8-story.html','9-story.html','10-story.html','11-story.html','12-story.html','13-story.html','14-story.html','15-story.html','16-story.html','17-story.html','18-story.html'];
 
 function preload() {
   for (var i = 0; i < files.length; i++) {
