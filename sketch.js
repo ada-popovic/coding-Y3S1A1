@@ -255,7 +255,7 @@ var counts = {};
 var keys = [];
 var allwords = [];
 
-var files = ['97-story.html','2-story.html','3-story.html','4-story.html','5-story.html','6-story.html','7-story.html'];
+var files = ['13-story.html','14-story.html','17-story.html','18-story.html'];
 
 function preload() {
   for (var i = 0; i < files.length; i++) {
@@ -323,29 +323,41 @@ function setup() {
   }
 
 
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
+//   for (var i = 0; i < keys.length; i++) {
+//     var key = keys[i];
+//
+//     // console.log(key);
+//
+//   // console.log(counts[key].tfidf);
+//
+//     if(counts[key].tfidf >= 20) {
+//
+//       for(var jndex = 0; jndex < counts[key].tfidf; jndex++) {
+//         // createDiv(key + " " + counts[key]);
+//         createDiv(key).addClass('adaski');
+//       }
+//
+//     }
+//
+//   }
+//
+//   noCanvas();
+// }
+//
 
-    // console.log(key);
 
-  // console.log(counts[key].tfidf);
+///===========================================
+for (var i = 0; i < keys.length; i++) {
+  var key = keys[i];
 
-    if(counts[key].tfidf >= 20) {
-
-      for(var jndex = 0; jndex < counts[key].tfidf; jndex++) {
-        // createDiv(key + " " + counts[key]);
-        createDiv(key).addClass('adaski');
-      }
-
-    }
-
+  if(counts[key].tfidf >= 30){
+    createDiv(key).addClass('adaski');
   }
 
-  noCanvas();
 }
 
-
-
+noCanvas();
+}
 
 
 // var txt;
