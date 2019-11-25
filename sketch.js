@@ -255,7 +255,7 @@ var counts = {};
 var keys = [];
 var allwords = [];
 
-var files = ['13-story.html','14-story.html','17-story.html','18-story.html'];
+var files = ['15-story.html','14-story.html','17-story.html','18-story.html'];
 
 function preload() {
   for (var i = 0; i < files.length; i++) {
@@ -350,13 +350,30 @@ function setup() {
 for (var i = 0; i < keys.length; i++) {
   var key = keys[i];
 
-  if(counts[key].tfidf >= 30){
+  if(counts[key].tfidf >= 20){
     createDiv(key).addClass('adaski');
   }
 
 }
 
 noCanvas();
+}
+
+
+
+var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+
+function loadFile() {
+    reader.open('get', '15.html', true);
+    reader.onreadystatechange = displayContents;
+    reader.send(null);
+}
+
+function displayContents() {
+    if(reader.readyState==4) {
+        var el = document.getElementById('booktitle');
+        el.innerHTML = reader.responseText;
+    }
 }
 
 
