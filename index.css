@@ -124,6 +124,47 @@ body {
 
 }
 
+
+.info {
+  position: absolute;
+  display: inline-block;
+  padding-top: 1px;
+  margin-left: 80%;
+  text-align: center;
+  margin-top: 40%;
+  height: 50px;
+  width: 50px;
+  color: white;
+  font-size: 2em;
+  font-family: Adieu;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 12;
+}
+
+.explanation {
+  position: fixed;
+  display: none;
+  margin-left: 30%;
+  margin-top: 20%;
+  height: 300px;
+  width: 400px;
+  background-color: yellow;
+  z-index: 11;
+}
+
+.back {
+  position: fixed;
+  display: none;
+  margin-left: 0%;
+  margin-top: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 0.7;
+  z-index: 10;
+}
+
 /* play with margin, float, width in percent and px */
 
 

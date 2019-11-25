@@ -369,6 +369,36 @@ $(document).ready(function(){
 });
 
 
+// $(function() {
+//     $('#info').click(function(){
+//         $('#explanation').css('display', 'inline-block');
+//         $('#back').css('display', 'inline-block');
+//     });
+// });
+
+var timesClicked = 0;
+
+$(function() {
+  $("#info").click(function() {
+  timesClicked++;
+
+  if (timesClicked<2) {
+    $('#explanation').css('display', 'inline-block');
+    $('#back').css('display', 'inline-block');
+  } else {
+    $('#explanation').css('display', 'none');
+    $('#back').css('display', 'none');
+  }
+
+  });
+
+});
+
+
+
+
+
+
 
 
 
