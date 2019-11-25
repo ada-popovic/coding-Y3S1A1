@@ -255,7 +255,7 @@ var counts = {};
 var keys = [];
 var allwords = [];
 
-var files = ['13-story.html','12-story.html','14-story.html','16-story.html','15-story.html'];
+var files = ['97-story.html','2-story.html','3-story.html','4-story.html','5-story.html','6-story.html','7-story.html'];
 
 function preload() {
   for (var i = 0; i < files.length; i++) {

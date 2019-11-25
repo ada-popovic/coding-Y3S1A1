@@ -144,21 +144,105 @@ app.get('/guten', function(req, res) {
   });
 });
 
-app.get('/books', function(req, res){
-  // var url = 'http://www.gutenberg.org/files/84/84-h/84-h.htm';
 
-  // guten_data_urls.forEach(function(url){
-  //   request({
-  //     url: url,
-  //     json: true
-  //   }, function(err, res, body) {
-  //     if(!error) {
-  //       fs.writeFile('./guten_address.html', guten_data_urls, function(error){
-  //         console.log("file is written successfully");
-  //       });
-  //     }
-  //   })
-  // });
+/////===================================
+
+// app.get('/books', function(req, res){
+//   // var url = 'http://www.gutenberg.org/files/84/84-h/84-h.htm';
+//
+//   // guten_data_urls.forEach(function(url){
+//   //   request({
+//   //     url: url,
+//   //     json: true
+//   //   }, function(err, res, body) {
+//   //     if(!error) {
+//   //       fs.writeFile('./guten_address.html', guten_data_urls, function(error){
+//   //         console.log("file is written successfully");
+//   //       });
+//   //     }
+//   //   })
+//   // });
+//   var index = 0;
+//
+//   guten_data_urls.forEach(function(url){
+//
+//     request({
+//       url: url
+//     }, function(error, response, html) {
+//       if (!error) {
+//
+//         var $ = cheerio.load(html);
+//
+//         var book_data = [];
+//         $('body').filter(function() {
+//           $(this).find('p').each(function(i, elem){
+//             book_data[i] = $(this).text();
+//           });
+//
+//
+//
+//
+//           // $(this).find('p').each(function(i, element) {
+//           //
+//           //   var bookText= $(this).attr('a').;
+//           //
+//           // });
+//         });
+//
+//         console.log(book_data);
+//
+//         fs.writeFile('./' + index + '-story.html', book_data, function(error){
+//           console.log("file is written successfully");
+//         });
+//         index++;
+//       }
+//     });
+//   });
+//
+// });
+
+////====================================================
+
+app.get('/titles', function(req, res){
+
+  var index = 0;
+
+  guten_data_urls.forEach(function(url){
+
+    request({
+      url: url
+    }, function(error, response, html) {
+      if (!error) {
+
+        var $ = cheerio.load(html);
+
+        var book_titles = [];
+        $('head').filter(function() {
+          $(this).find('title').each(function(i, elem){
+            book_titles[i] = $(this).text();
+          });
+
+
+        });
+
+        console.log(book_titles);
+
+        fs.writeFile('./' + index + '.html', book_titles, function(error){
+          console.log("file is written successfully");
+        });
+        index++;
+      }
+    });
+  });
+
+});
+
+
+//////============
+
+
+app.get('/books', function(req, res){
+
   var index = 0;
 
   guten_data_urls.forEach(function(url){
@@ -176,11 +260,7 @@ app.get('/books', function(req, res){
             book_data[i] = $(this).text();
           });
 
-          // $(this).find('p').each(function(i, element) {
-          //
-          //   var bookText= $(this).attr('a').;
-          //
-          // });
+
         });
 
         console.log(book_data);
