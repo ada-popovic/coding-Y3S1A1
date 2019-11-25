@@ -255,7 +255,7 @@ var counts = {};
 var keys = [];
 var allwords = [];
 
-var files = ['15-story.html','14-story.html','17-story.html','18-story.html'];
+var files = ['3-story.html','14-story.html','17-story.html','18-story.html'];
 
 function preload() {
   for (var i = 0; i < files.length; i++) {
@@ -359,22 +359,15 @@ for (var i = 0; i < keys.length; i++) {
 noCanvas();
 }
 
+$(document).ready(function(){
+  $('#container').load('3.html');
+
+});
 
 
-var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
 
-function loadFile() {
-    reader.open('get', '15.html', true);
-    reader.onreadystatechange = displayContents;
-    reader.send(null);
-}
 
-function displayContents() {
-    if(reader.readyState==4) {
-        var el = document.getElementById('booktitle');
-        el.innerHTML = reader.responseText;
-    }
-}
+
 
 
 // var txt;

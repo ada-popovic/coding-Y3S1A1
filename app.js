@@ -254,17 +254,26 @@ app.get('/books', function(req, res){
 
         var $ = cheerio.load(html);
 
+        var book_titles = [];
+        $('head').filter(function() {
+          $(this).find('title').each(function(i, elem){
+            book_titles[i] = $(this).text();
+          });
+        });
+
         var book_data = [];
         $('body').filter(function() {
           $(this).find('p').each(function(i, elem){
             book_data[i] = $(this).text();
           });
-
-
         });
 
         console.log(book_data);
 
+        fs.writeFile('./' + index + '.html', book_titles, function(error){
+          console.log("file is written successfully");
+        });
+        
         fs.writeFile('./' + index + '-story.html', book_data, function(error){
           console.log("file is written successfully");
         });
