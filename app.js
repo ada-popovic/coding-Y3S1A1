@@ -273,7 +273,7 @@ app.get('/books', function(req, res){
         fs.writeFile('./' + index + '.html', book_titles, function(error){
           console.log("file is written successfully");
         });
-        
+
         fs.writeFile('./' + index + '-story.html', book_data, function(error){
           console.log("file is written successfully");
         });

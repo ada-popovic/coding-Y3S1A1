@@ -165,6 +165,10 @@ body {
   z-index: 10;
 }
 
+#p5_loading {
+  display:none;
+}
+
 /* play with margin, float, width in percent and px */
 
 
