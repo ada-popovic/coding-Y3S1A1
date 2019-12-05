@@ -249,7 +249,7 @@
 // }
 
 /////////44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
-var randomNumber = Math.floor(Math.random() * 99) + 2;
+var randomNumber = Math.floor(Math.random() * 99) + 3;
 var txt = [];
 var counts = {};
 var keys = [];
@@ -355,7 +355,8 @@ for (var i = 0; i < keys.length; i++) {
   // }
 
   if(keys.length= 5){
-    createDiv(key).addClass('adaski');
+    var div = createDiv( key ).addClass( 'adaski' );
+    $( div.elt ).appendTo( $( '#links' ) );
   }
 
 }
@@ -382,7 +383,8 @@ $(function() {
   $("#info").click(function() {
   timesClicked++;
 
-  if (timesClicked<2) {
+
+  if ( timesClicked % 2 != 0 ) {
     $('#explanation').css('display', 'inline-block');
     $('#back').css('display', 'inline-block');
   } else {

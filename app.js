@@ -203,39 +203,39 @@ app.get('/guten', function(req, res) {
 
 ////====================================================
 
-app.get('/titles', function(req, res){
-
-  var index = 0;
-
-  guten_data_urls.forEach(function(url){
-
-    request({
-      url: url
-    }, function(error, response, html) {
-      if (!error) {
-
-        var $ = cheerio.load(html);
-
-        var book_titles = [];
-        $('head').filter(function() {
-          $(this).find('title').each(function(i, elem){
-            book_titles[i] = $(this).text();
-          });
-
-
-        });
-
-        console.log(book_titles);
-
-        fs.writeFile('./' + index + '.html', book_titles, function(error){
-          console.log("file is written successfully");
-        });
-        index++;
-      }
-    });
-  });
-
-});
+// app.get('/titles', function(req, res){
+//
+//   var index = 0;
+//
+//   guten_data_urls.forEach(function(url){
+//
+//     request({
+//       url: url
+//     }, function(error, response, html) {
+//       if (!error) {
+//
+//         var $ = cheerio.load(html);
+//
+//         var book_titles = [];
+//         $('head').filter(function() {
+//           $(this).find('title').each(function(i, elem){
+//             book_titles[i] = $(this).text();
+//           });
+//
+//
+//         });
+//
+//         console.log(book_titles);
+//
+//         fs.writeFile('./' + index + '.html', book_titles, function(error){
+//           console.log("file is written successfully");
+//         });
+//         index++;
+//       }
+//     });
+//   });
+//
+// });
 
 
 //////============
@@ -254,13 +254,31 @@ app.get('/books', function(req, res){
 
         var $ = cheerio.load(html);
 
-        var book_titles = [];
-        $('head').filter(function() {
-          $(this).find('title').each(function(i, elem){
-            book_titles[i] = $(this).text();
-          });
-        });
+        // var book_titles = [];
+        // $('head').filter(function() {
+        //   $(this).find('title').each(function(i, elem){
+        //     book_titles[i] = $(this).text();
+        //   });
+        // });
 
+var book_titles = [];
+if ($('head').find('title').text() === '') {
+  $('body').filter(function() {
+    book_titles[i] = $(this).find('h1').text;
+  });
+} else {
+  $('body').filter(function() {
+    $(this).find('h1').each(function(i, elem) {
+      book_titles[i] = $(this).text();
+    });
+  });
+} else {
+  $('body#h1#i').filter(function() {
+    $(this).find('b').each(function(i, elem) {
+      book_titles[i] = $(this).text();
+    });
+  });
+}
         var book_data = [];
         $('body').filter(function() {
           $(this).find('p').each(function(i, elem){

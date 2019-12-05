@@ -107,12 +107,17 @@ body {
 }
 
 
+
+#links {
+  position: absolute;
+  left: calc(4% + 400px); top: 20px;
+}
 .adaski {
   text-align: center;
   padding: 3px;
   width: 200px;
   height: 50px;
-  margin-left: 33%;
+  /* margin-left: 33%; */
   margin-top: 0.5%;
   font-size: 2em;
   font-family: Adieu;
