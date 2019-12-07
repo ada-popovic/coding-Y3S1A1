@@ -366,8 +366,10 @@ noCanvas();
 
 $(document).ready(function(){
   $('#container').load('./'+ randomNumber + '.html');
+  $('#inittext').load('./'+ randomNumber + '-story.html');
 
 });
+
 
 
 // $(function() {
@@ -397,9 +399,24 @@ $(function() {
 });
 
 
+window.setInterval('refresh()', 30000); 	// Call a function every 10000 milliseconds (OR 10 seconds).
 
+    // Refresh or reload page.
+    function refresh() {
+        window .location.reload();
+    }
 
-
+    // window.onload = setupRefresh;
+    //    function setupRefresh()
+    //    {
+    //        setInterval("refreshBlock();",3000);
+    //    }
+    //
+    //    function refreshBlock()
+    //    {
+    //      $('#container').load('./'+ randomNumber + '.html');
+    //      $('#inittext').load('./'+ randomNumber + '-story.html');
+    //    }
 
 
 

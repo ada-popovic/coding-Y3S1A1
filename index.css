@@ -1,7 +1,7 @@
 html,
 A {text-decoration: none;}
 body {
-    height: 400%;
+    height: 100%;
 }
 
 * {
@@ -11,6 +11,7 @@ body {
 
 body {
     background-color: white;
+    overflow: hidden;
 
 }
 
@@ -20,18 +21,39 @@ body {
   /* background-color: lightpink; */
   overflow-wrap: normal;
   padding: 15px;
-  width: 240px;
+  width: 38%;
   height: 350px;
-  margin-left: 130px;
-  margin-top: 155px;
+  margin-left: 0px;
+  margin-top: 0px;
   z-index: 4;
-  font-size: 30px;
-  font-family: Adieu;
+  font-size: 3em;
+  font-family: Taviraj;
   color: black;
   z-index: 2;
+  overflow-wrap: normal;
+  line-height: 110%;
 }
 
-.book1 {
+.inittext {
+  position: absolute;
+  display: inline-block;
+  /* background-color: lightblue; */
+  overflow-wrap: normal;
+  padding: 15px;
+  width: 38%;
+  height: 390px;
+  margin-left: 0px;
+  margin-top: 355px;
+  z-index: 4;
+  font-size: 13px;
+  font-family: Times;
+  color: black;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 4;
+}
+
+/* .book1 {
   position: absolute;
   display: inline-block;
   width: 20%;
@@ -44,46 +66,116 @@ body {
   position: absolute;
   display: inline-block;
   width: 170%;
+} */
+
+
+.gut {
+  position: absolute;
+  display: inline-block;
+  width: 20%;
+  margin-left: 80%;
+  margin-top: 26%;
+  z-index: 2;
+}
+
+.gut img{
+  position: absolute;
+  display: inline-block;
+  width: 100%;
 }
 
 
-.readbooks {
+
+
+.read {
   float: none;
   position: absolute;
   display: inline-block;
-  text-align: justify;
-  width: 700px;
+  width: 20%;
   height: 100%;
-  margin-left: 60%;
-  margin-top: 2%;
-  font-size: 4em;
-  font-family: Adieu;
-  color: yellow;
+  margin-left: 75%;
+  margin-top: 0%;
+  font-size: 7em;
+  font-family: Akzidenz-Grotesk Pro;
+  color: black;
   /* background-color: lightpink; */
-  -webkit-text-stroke: 5px black;
+  /* -webkit-text-stroke: 5px black; */
   z-index: 1;
 
 }
+
+.books {
+  float: none;
+  position: absolute;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  margin-left: 75%;
+  margin-top: 6%;
+  font-size: 4em;
+  font-family: Akzidenz-Grotesk Pro;
+  color: black;
+  /* background-color: lightpink; */
+  /* -webkit-text-stroke: 5px black; */
+  z-index: 1;
+
+}
+
 
 .faster {
   float: none;
   position: absolute;
   display: inline-block;
-  text-align: justify;
-  width: 700px;
+  width: 20%;
   height: 100%;
-  margin-left: 60%;
-  margin-top: 7%;
-  font-size: 7.4em;
-  font-family: Adieu;
-  color: yellow;
+  margin-left: 75%;
+  margin-top: 10%;
+  font-size: 6em;
+  font-family: Akzidenz-Grotesk Pro;
+  color: black;
   /* background-color: lightpink; */
-  -webkit-text-stroke: 5px black;
+  /* -webkit-text-stroke: 5px black; */
   z-index: 1;
 
 }
 
-.button {
+.with {
+  float: none;
+  position: absolute;
+  display: inline-block;
+  text-align: justify;
+  width: 20%;
+  height: 100%;
+  margin-left: 60%;
+  margin-top: 7%;
+  font-size: 7em;
+  font-family: Taviraj;
+  color: black;
+  /* background-color: lightpink; */
+  /* -webkit-text-stroke: 5px black; */
+  z-index: 1;
+
+}
+
+.highlighter {
+  float: none;
+  position: absolute;
+  display: inline-block;
+  text-align: justify;
+  width: 20%;
+  height: 100%;
+  margin-left: 80%;
+  margin-top: 7%;
+  font-size: 7em;
+  font-family: Taviraj;
+  color: black;
+  /* background-color: lightpink; */
+  /* -webkit-text-stroke: 5px black; */
+  z-index: 1;
+
+}
+
+/* .button {
   float: none;
   position: absolute;
   display: inline-block;
@@ -106,25 +198,33 @@ body {
   width: 20px;
   margin-left: 60.5%;
   margin-top: 21%;
-}
+} */
 
 
 
 #links {
   position: absolute;
-  left: calc(4% + 400px); top: 20px;
+  /* left: calc(4% + 400px); top: 20px; */
+  margin-left: 42%;
+  margin-top: -20px;
+  width: 40%;
+  z-index: 10;
 }
 .adaski {
   text-align: center;
   padding: 3px;
-  width: 200px;
-  height: 50px;
+  padding-top: 30px;
+  width: 80%;
+  height: 100px;
   /* margin-left: 33%; */
-  margin-top: 0.5%;
-  font-size: 2em;
-  font-family: Adieu;
+  margin-top: 4%;
+  font-size: 3em;
+  font-family: Taviraj;
   color: black;
   background-color: yellow;
+  text-transform: uppercase;
+  z-index: 10;
+
   /* animation-name: colorchange;
   animation-duration: 6s;
   animation-iteration-count: infinite; */
