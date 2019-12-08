@@ -421,8 +421,44 @@ window.setInterval('refresh()', 30000); 	// Call a function every 10000 millisec
 
 
 
+    //
+    // function highlight(text) {
+    //   var inputText = document.getElementById("inittext");
+    //   var innerHTML = inputText.innerHTML;
+    //   var index = innerHTML.indexOf(text);
+    //   if (index >= 0) {
+    //    innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+    //    inputText.innerHTML = innerHTML;
+    //   }
+    // }
 
 
+    // $.fn.replaceText = function( search, replace, text_only ) {
+    // return this.each(function(){
+    //         var node = this.firstChild,
+    //         val, new_val, remove = [];
+    //         if ( node ) {
+    //             do {
+    //               if ( node.nodeType === 3 ) {
+    //                 val = node.nodeValue;
+    //                 new_val = val.replace( search, replace );
+    //                 if ( new_val !== val ) {
+    //                   if ( !text_only && /</.test( new_val ) ) {
+    //                     $(node).before( new_val );
+    //                     remove.push( node );
+    //                   } else {
+    //                     node.nodeValue = new_val;
+    //                   }
+    //                 }
+    //               }
+    //             } while ( node = node.nextSibling );
+    //         }
+    //         remove.length && $(remove).remove();
+    //     });
+    // };
+    //
+    // // finally replace string occurrences with a span css styled element
+    // $('.inittext').replaceText(/(the)/gi, '<span class="highlight">$1</span>');
 
 
 // var txt;
