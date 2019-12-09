@@ -399,12 +399,18 @@ $(function() {
 });
 
 
-window.setInterval('refresh()', 30000); 	// Call a function every 10000 milliseconds (OR 10 seconds).
+window.setInterval('refresh()', 10000); 	// Call a function every 10000 milliseconds (OR 10 seconds).
 
     // Refresh or reload page.
     function refresh() {
         window .location.reload();
     }
+
+
+    window.setInterval(function() {
+      var elem = document.getElementById('description');
+      elem.scrollTop = elem.scrollHeight;
+    }, 5000);
 
     // window.onload = setupRefresh;
     //    function setupRefresh()

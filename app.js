@@ -261,24 +261,24 @@ app.get('/books', function(req, res){
         //   });
         // });
 
-var book_titles = [];
-if ($('head').find('title').text() === '') {
-  $('body').filter(function() {
-    book_titles[i] = $(this).find('h1').text;
-  });
-} else {
-  $('body').filter(function() {
-    $(this).find('h1').each(function(i, elem) {
-      book_titles[i] = $(this).text();
-    });
-  });
-} else {
-  $('body#h1#i').filter(function() {
-    $(this).find('b').each(function(i, elem) {
-      book_titles[i] = $(this).text();
-    });
-  });
-}
+// var book_titles = [];
+// if ($('head').find('title').text() === '') {
+//   $('body').filter(function() {
+//     book_titles[i] = $(this).find('h1').text;
+//   });
+// } else {
+//   $('body').filter(function() {
+//     $(this).find('h1').each(function(i, elem) {
+//       book_titles[i] = $(this).text();
+//     });
+//   });
+// } else {
+//   $('body#h1#i').filter(function() {
+//     $(this).find('b').each(function(i, elem) {
+//       book_titles[i] = $(this).text();
+//     });
+//   });
+// }
         var book_data = [];
         $('body').filter(function() {
           $(this).find('p').each(function(i, elem){
@@ -288,11 +288,11 @@ if ($('head').find('title').text() === '') {
 
         console.log(book_data);
 
-        fs.writeFile('./' + index + '.html', book_titles, function(error){
+        fs.writeFile('./' + index + '2.html', book_titles, function(error){
           console.log("file is written successfully");
         });
 
-        fs.writeFile('./' + index + '-story.html', book_data, function(error){
+        fs.writeFile('./' + index + '-story2.html', book_data, function(error){
           console.log("file is written successfully");
         });
         index++;
